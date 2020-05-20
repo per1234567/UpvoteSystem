@@ -6,7 +6,7 @@ var io;
 app.use(express.static('public'));
 app.set('view engine','ejs');
 
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
     console.log(`server started on port ${PORT}`);
 });
@@ -19,7 +19,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 mongoose.connect(url, () => {
-    console.log('connected to db');
+    console.log('connected to DB');
 });
 
 class DB{
@@ -61,7 +61,7 @@ class DB{
 }
 
 DB.initialize();
-DB.reset();
+//DB.reset();
 
 app.get('/', async(req, res) => {
     const data = await DB.get();
