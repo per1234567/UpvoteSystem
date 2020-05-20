@@ -8,7 +8,7 @@ app.set('view engine','ejs');
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-    console.log(`server started on port ${PORT}`);
+    console.log(`server is now running on port ${PORT}`);
 });
 
 io = require('socket.io')(server);
