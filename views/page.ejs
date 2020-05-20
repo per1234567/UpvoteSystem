@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-width, initial-scale=1.0">
+    <title>Perliukai</title>
+    <link rel = "stylesheet" type = "text/css" href = "/css/style.css">
+    <script src = '/socket.io/socket.io.js'></script>
+</head>
+<body style = 'margin:0'>
+    <div id = 'content'>
+        <div id = 'licas'></div>
+    <h2 id = 'karta'>XXVIII</h2>
+    <h1>Mokytojų perliukai</h1>
+    <div id = 'bar'>
+        <input onclick = 'location.href = "https://www.paskutinisskambutis.com/atsiminimai/";' type = 'submit' value = 'Atsiminimai'>
+        <input onclick = 'location.href = "https://www.paskutinisskambutis.com/mokytojai/";' type = 'submit' value = 'Mokytojai'>
+        <input onclick = 'location.href = "https://www.paskutinisskambutis.com/save/";' type = 'submit' value = 'Sužinok daugiau apie save'>
+        <input onclick = 'location.href = "https://www.paskutinisskambutis.com/spauda/";' type = 'submit' value = 'Spauda'>
+        <input onclick = 'location.href = "https://www.paskutinisskambutis.com/protmusis/";' type = 'submit' value = 'Protmūšis'>
+    </div>
+    <div id = '123' style = 'width: 600px; margin: auto; max-width: 80vw;'>
+        <% data.forEach(block => { %>
+            <div id = '<%=block._id%>'>
+                <div id = 'block'>
+                    <h3><%=block.mokytojas%></h3>
+                    <div style = 'margin: 5px'><%=block.text%></div>
+                </div>
+                <span class = 'counter'><%=block.downvote%></span>
+                <input id = 'downvote' class = 'reaction' type = 'submit' value = ''>
+                <span class = 'counter'><%=block.upvote%></span>
+                <input id = 'upvote' class = 'reaction' type = 'submit' value = ''>
+            </div>
+        <% }) %>
+        <div id = 'br' style = 'margin-bottom: 100px;'></div>
+    </div>
+    </div>
+<script src = "../page.js"></script>
+</body>
+
+</html>
