@@ -24,5 +24,5 @@ socket.on('upvote', data => {
 
 const licas = document.getElementById('licas');
 licas.addEventListener('click', () => {
-    window.location.href = 'https://www.paskutinisskambutis.com/';
+    window.location.href = 'https://www.100uzduotys.com/';
 });
