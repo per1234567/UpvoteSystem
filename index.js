@@ -13,7 +13,7 @@ const server = app.listen(PORT, () => {
 
 io = require('socket.io')(server);
 
-const url = 'mongodb+srv://Per:HVOSDPWev9AYocyY@perliukai-4jawx.gcp.mongodb.net/perliukai?retryWrites=true&w=majority';
+const url = 'mongodb+srv://Per:qrQGZSyXmQMl6htf@perliukai-4jawx.gcp.mongodb.net/data?retryWrites=true&w=majority';
 //const url = 'mongodb://localhost:27017/duomenys';
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
