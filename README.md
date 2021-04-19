@@ -1,0 +1,1 @@
+This is a simple system I've built that allows multiple users to connect and "upvote" the text entries they like the most. These entries get sorted if the page is reloaded.
